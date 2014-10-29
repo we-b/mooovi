@@ -7,46 +7,22 @@
             <div class="container">
               <header class="header header--section">
                 <h2 class="text-middle">
-                  <i class="icon-movie color-gray-light"></i>最新の投稿
+                  <i class="icon-movie color-gray-light"></i>新着作品
                 </h2>
               </header>
               <ul class="thumbnails thumbnail--movies row grid4 js-lazy-load-images js-my-check-stats" id="list-module">
-                <% @reviews.each do |review| %>
+                <% @products.each do |product| %>
                   <li class="col">
-                      <div class="thumbnail__figure" style="background-image:url(<%= review.product.image_url %>)"></div>
+                    <a href="/products/<%= product.id %>"><div class="thumbnail__figure" style="background-image:url(<%= product.image_url %>)"></div></a>
                     <div class="thumbnail__caption">
-                      <h3 class="text-xsmall text-overflow" title="<%= review.product.title %>">
-                        <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= review.product.title %><small 2014=""></small>
+                      <h3 class="text-xsmall text-overflow" title="<%= product.title %>">
+                        <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= product.title %><small 2014=""></small>
                       </h3>
                       <p class="text-small">
-                        <span class="rating-star"><i class="star-actived rate-<%= review.rate %>0"></i></span>
-                      </p>
-                      <p class="text-xxsmall">
-                        <%= review.review %>
-                      </p>
-                      <p class="text-xxsmall">
-                        <span class="label bgcolor-YR"><%= review.nickname %></span>
+                        <span class="rating-star"><i class="star-actived rate-<%= product.average_rate %>0"></i></span>
                       </p>
                     </div>
                   </li>
-                <% end %>
-              </ul>
-            </div>
-          </article>
-          <article class="section">
-            <div class="container">
-              <header class="header header--section">
-                <h2 class="text-middle">
-                  <i class="icon-pencil color-gray-light"></i>新着作品
-                </h2>
-              </header>
-              <ul class="thumbnails thumbnail--movies row grid6 js-lazy-load-images" id="latest_review_targets">
-                <% @products.each do |product| %>
-                <li class="col">
-                  <a href="/entry/<%= product.id %>">
-                    <div alt="<%= product.title %>" class="thumbnail__figure" style="background-image:url(<%= product.image_url %>)" title="<%= product.title %>"></div>
-                  </a>
-                </li>
                 <% end %>
               </ul>
             </div>

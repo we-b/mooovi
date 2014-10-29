@@ -1,11 +1,7 @@
-class TopController < ApplicationController
-  layout 'review_site'
-
-  before_action :set_ranking
+class TopController < ReviewController
 
   def index
-    @reviews = Review.order('id DESC').limit(8)
-    @products = Product.order('id DESC').limit(6)
+    @products = Product.order('id DESC').limit(20)
   end
 
   def search
@@ -32,10 +28,5 @@ class TopController < ApplicationController
 
   def create_params
     params.permit(:nickname, :product_id, :rate, :review)
-  end
-
-  private
-  def set_ranking
-    @ranking = ReviewRank.new(5).get
   end
 end

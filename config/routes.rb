@@ -7,6 +7,7 @@ TechReviewSite::Application.routes.draw do
 
   get 'entry/:id' => 'top#entry'
   get 'search' => 'top#search'
+  resources :products, :only => [:show]
 
   post 'entry/:product_id' => 'top#post'
 
@@ -14,6 +15,7 @@ TechReviewSite::Application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   resources :works, :only => [:index] do
     collection do
+      get :initial_scraping
       get :first_scraping
       get :second_scraping
       get :third_scraping
