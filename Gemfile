@@ -49,5 +49,8 @@ end
 gem 'rb-readline', '~> 0.4.2'
 gem 'unicorn'
 
-# Use Devise
+# Use devise
 gem 'devise'
+
+# Use paperclip
+gem "paperclip"
