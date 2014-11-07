@@ -1,0 +1,24 @@
+<h2>User Page</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left">カラム名</th>
+<th style="text-align:left">値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">nickname</td>
+<td style="text-align:left"><%= @user.nickname%> </td>
+</tr>
+<tr>
+<td style="text-align:left">avatar(medium)</td>
+<td style="text-align:left"><%= image_tag @user.avatar.url(:medium) %></td>
+</tr>
+<tr>
+<td style="text-align:left">avatar(thumb)</td>
+<td style="text-align:left"><%= image_tag @user.avatar.url(:thumb) %></td>
+</tr>
+</tbody>
+</table>

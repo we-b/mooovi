@@ -6,6 +6,8 @@ TechReviewSite::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'top#index'
 
+  resources :users, :only => [:show]
+
   get 'entry/:id' => 'top#entry'
   get 'search' => 'top#search'
   resources :products, :only => [:show]
