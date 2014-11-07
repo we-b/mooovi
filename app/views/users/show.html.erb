@@ -22,3 +22,32 @@
 </tr>
 </tbody>
 </table>
+
+<% @user.reviews.each do |review| %>
+  <table>
+  <thead>
+  <tr>
+  <th style="text-align:left">カラム名</th>
+  <th style="text-align:left">値</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td style="text-align:left">user</td>
+  <td style="text-align:left"><%= review.user.nickname %> </td>
+  </tr>
+  <tr>
+  <td style="text-align:left">rate</td>
+  <td style="text-align:left"><%= review.rate %></td>
+  </tr>
+  <tr>
+  <td style="text-align:left">image</td>
+  <td style="text-align:left"><%= image_tag review.product.image_url %></td>
+  </tr>
+  <tr>
+  <td style="text-align:left">review</td>
+  <td style="text-align:left"><%= review.review %></td>
+  </tr>
+  </tbody>
+  </table>
+<% end %>
