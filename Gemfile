@@ -48,3 +48,6 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'rb-readline', '~> 0.4.2'
 gem 'unicorn'
+
+# Use Devise
+gem 'devise'
