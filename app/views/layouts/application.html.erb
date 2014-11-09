@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <title>TechReviewSite</title>
@@ -8,14 +8,47 @@
 </head>
 <body>
 
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
 
-<%= yield %>
+   -->
+<!DOCTYPE html>
+<html class="pc" lang="ja" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+      <title>映画レビューサイト</title>
+      <link href='http://fonts.googleapis.com/css?family=roboto:700,300,400,600' rel='stylesheet' type='text/css'>
+      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+      <%= csrf_meta_tags %>
+    </meta>
+  </head>
+  <body class="yj950-2">
+    <div id="wrapper">
+      <div id="yjContentsHeader">
+        <nav class="globalnav">
+          <div class="globalnav__menu">
+            <ul class="gmenu">
+              <li class="logo" style="float: left">
+                <a href="/">mooovi</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="bgcolor-white pt1em pb1em" id="contents">  <div id="main_cnt_wrapper">
+        <div id="yjContentsBody">
+          <div class="yjContainer">
+            <% if notice %>
+              <p class="alert alert-success"><%= notice %></p>
+            <% end %>
+            <% if alert %>
+              <p class="alert alert-danger"><%= alert %></p>
+            <% end %>
+
+            <%= yield %>
+          </div>
+        </div>
+      </div>
 
 </body>
 </html>

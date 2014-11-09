@@ -1,19 +1,27 @@
-=> app/views/users/sessions/new.html.erb
+<div class="form_box">
+  <h2>mooovi <span>ログイン</span></h2>
 
-<h2>Log in</h2>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div>
+    <%= f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力' %></div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+    <div>
+      <%= f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力' %></div>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+    <div class="row">
+      <% if devise_mapping.rememberable? -%>
+        <div class="col-xs-6"><%= f.check_box :remember_me %> <%= f.label :パスワードを記憶 %></div>
+      <% end -%>
+        <div class="col-xs-6">パスワードを忘れましたか？</div>
+    </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+    <div class="submit"><%= f.submit "ログイン" %></div>
+  <% end %>
 
-  <div><%= f.submit "Log in" %></div>
-<% end %>
+  <div class="more_link_box">
+    <strong>まだアカウントを持っていませんか？</strong>
+    <a href="#" class="more_link">新規登録</a>
+  </div>
 
-<%= render "users/shared/links" %>
+  <%= render "users/shared/links" %>
+</div>
