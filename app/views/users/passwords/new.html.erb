@@ -1,12 +1,20 @@
-<h2>パスワードを忘れましたか?</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+<div class="bgcolor-white pt1em pb1em" id="contents">  <div id="main_cnt_wrapper">
+  <div id="yjContentsBody">
+    <div class="yjContainer">
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+      <h2>パスワードを忘れましたか?</h2>
 
-  <div><%= f.submit "確認メールを送信する" %></div>
-<% end %>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
 
-<%= render "users/shared/links" %>
+        <div><%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %></div>
+
+        <div><%= f.submit "確認メールを送信する" %></div>
+      <% end %>
+
+      <%= render "users/shared/links" %>
+    </div>
+  </div>
+</div>
