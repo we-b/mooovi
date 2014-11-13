@@ -7,4 +7,13 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up).push(:nickname, :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at, :avatar)
   end
+
+  # devise
+  def after_sign_in_path_for(resource)
+    root_path
+  end
+
+  def after_sign_out_path_for(resource)
+  	'/users/sign_in'
+  end
 end
