@@ -13,12 +13,12 @@
     <div class="label"><%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => 'パスワードを入力（確認）' %></div>
 
-    <div class="label"><%= f.label :nickname %><br />
+    <!-- <div class="label"><%= f.label :nickname %><br />
     <%= f.text_field :nickname, :placeholder => 'ニックネームを入力' %></div>
 
     <div class="field">
       <%= f.file_field :avatar %>
-    </div>
+    </div> -->
 
     <div class="submit">
         <div class="actions">
@@ -28,10 +28,10 @@
 
   <div class="more_link_box">
     <strong>すでにアカウントを持っていますか？</strong>
-    <a href="#">ログイン</a>
+    <%= render "users/shared/links" %>
   </div>
   <% end %>
 
 
-  <%= render "users/shared/links" %>
+  <!-- <%= render "users/shared/links" %> -->
 </div>
