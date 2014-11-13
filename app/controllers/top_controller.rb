@@ -1,5 +1,6 @@
 class TopController < ReviewController
-
+  before_action :authenticate_user!, only:[:search, :entry]
+  
   def index
     @products = Product.order('id DESC').limit(20)
   end

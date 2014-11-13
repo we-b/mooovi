@@ -1,6 +1,7 @@
 class ReviewController < ApplicationController
   layout 'review_site'
 
+    
   before_action :auth, :set_ranking
 
   private
