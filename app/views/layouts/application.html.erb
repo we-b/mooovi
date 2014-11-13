@@ -15,7 +15,7 @@
   <head>
     <meta charset="utf-8">
       <title>映画レビューサイト</title>
-      <link href='http://fonts.googleapis.com/css?family=roboto:700,300,400,600' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
       <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
       <%= csrf_meta_tags %>
@@ -35,9 +35,6 @@
         </nav>
       </div>
 
-      <div class="bgcolor-white pt1em pb1em" id="contents">  <div id="main_cnt_wrapper">
-        <div id="yjContentsBody">
-          <div class="yjContainer">
             <% if notice %>
               <p class="alert alert-success"><%= notice %></p>
             <% end %>
@@ -46,9 +43,6 @@
             <% end %>
 
             <%= yield %>
-          </div>
-        </div>
-      </div>
 
 </body>
 </html>
