@@ -46,5 +46,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'rb-readline', '~> 0.4.2'
-gem 'unicorn'
+
+# pry
+gem 'pry-rails'
