@@ -32,25 +32,23 @@
               <i class="icon-crown color-gray-light"></i>投稿ランキング
             </h4>
             <ul class="listview listview--condensed text-small">
-              <% [].each.with_index(1) do |product, i| %>
-              <li data-cinema-id="346394">
-                <a href="/products/<%= product.id %>">
+              <li data-cinema-id="">
+                <a href="">
                   <div class="box">
                     <div class="box__cell w40 align-center">
                       <p class="label bgcolor-gray-lighter align-center">
-                        <%= i %>
+                        1
                       </p>
                     </div>
                     <div class="box__cell pl1em">
                       <p class="text-xsmall no-space">
-                        <%= product.title %>
+                        神さまの言うとおり
                       </p>
-                      <img src="<%= product.image_url %>" alt="">
+                      <img src="http://image.eiga.k-img.com/images/movie/79576/poster2/200.jpg?1410346831" alt="">
                     </div>
                   </div>
                 </a>
               </li>
-              <% end %>
             </ul>
           </aside>
         </div>
