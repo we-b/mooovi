@@ -1,5 +1,5 @@
 class Scraping
-  def self.get_products
+  def self.movie_urls
     puts 'get movies link URL'
     # ここに処理を書く
   end
