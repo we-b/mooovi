@@ -10,7 +10,7 @@
                   <i class="icon-movie color-gray-light"></i>投稿する作品を検索
                 </h2>
               </header>
-              <%= form_for('/search', method: :get) do |f| %>
+              <%= form_tag('/search', method: :get) do %>
                 <input class="search__query" name="keyword" placeholder="作品名で検索" type="text" value=""><button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>
               <% end %>
               <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">

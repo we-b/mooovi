@@ -11,7 +11,7 @@
                   <i class="icon-movie color-gray-light"></i>投稿
                 </h2>
               </header>
-              <%= form_for("/entry/#{@product.id}") do |f| %>
+              <%= form_tag("/entry/#{@product.id}") do  %>
                 <div>
                   <ul class="listview js-lazy-load-images">
                     <li style="margin-bottom: 15px">
