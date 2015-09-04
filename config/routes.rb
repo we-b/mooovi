@@ -5,11 +5,11 @@ TechReviewSite::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'top#index'
 
+  get 'entry/:id' => 'top#entry'
   get 'search' => 'top#search'
+  resources :products, :only => [:show]
 
-  resources :products, :only => [:show] do
-    resources :reviews, only: [:new, :create]
-  end
+  post 'entry/:product_id' => 'top#post'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
