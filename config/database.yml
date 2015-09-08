@@ -11,7 +11,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: tech_review_site_development
+  database: mooovi_development
   pool: 5
   username: root
   password:
@@ -23,7 +23,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: tech_review_site_test
+  database: mooovi_test
   pool: 5
   username: root
   password:
