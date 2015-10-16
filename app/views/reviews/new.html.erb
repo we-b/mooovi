@@ -17,12 +17,12 @@
                     <div class="box">
                       <div class="box__cell w80">
                         <div class="thumbnail thumbnail--photo">
-                          <div class="thumbnail__figure" style="background-image: url(<%= @product.image_url %>);"></div>
+                          <div class="thumbnail__figure" style="background-image: url('http://image.eiga.k-img.com/images/movie/81541/poster2/200.jpg?1436408098');"></div>
                         </div>
                       </div>
                       <div class="box__cell pl1em">
                         <h3 class="text-middle text-break color-sub">
-                          <%= @product.title %>
+                          タイトル
                         </h3>
                         <p class="text-xsmall">
                         </p>
@@ -33,6 +33,22 @@
                 </li>
               </ul>
             </div>
+            <form>
+              <div style="margin: 8px 0">
+                <label style="margin-right: 8px">ニックネーム</label><input name="nickname" placeholder="ニックネーム" type="text" value="">
+              </div>
+              <div style="margin: 8px 0">
+                <label style="margin-right: 8px">評価</label><input class="search__query" name="rate" placeholder="評価" style="text-align: right" type="number" max="10" min="1" value="1"> (10段階評価)
+              </div>
+              <div style="margin: 8px 0">
+                <textarea name="review" placeholder="レビューを書いてね！" style="width: 100%; height: 300px"></textarea>
+              </div>
+              <div class="row">
+                <div class="col10 push1">
+                  <button type="submit" class="btn btn--block">投稿する<i class="icon-arrow-right"></i></button>
+                </div>
+              </div>
+            </form>
           </div>
         </article>
       </div>
