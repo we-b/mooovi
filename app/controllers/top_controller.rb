@@ -1,2 +1,0 @@
-class TopController < ReviewController
-end
