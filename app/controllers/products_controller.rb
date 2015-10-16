@@ -1,2 +1,2 @@
-class ProductsController < ReviewController
+class ProductsController < RankingController
 end
