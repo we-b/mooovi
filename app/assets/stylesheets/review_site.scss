@@ -6,6 +6,7 @@ Yahoo!Japan Movies CSS for PC
 #msthd{width:100%;margin:4px auto 10px;line-height:1.22!important}#msthd:after{content:"";display:block;clear:both}#msthd div,#msthd p,#msthd ul,#msthd li{list-style:none;margin:0;padding:0;font-size:small}#msthd a img{border:0}#msthd .logo{float:left;padding:6px 10px 5px 5px}#msthd .msthdtxt{float:left;position:relative;z-index:1;min-height:2.4em;margin:6px 0 0;width:50%}#msthd .b{font-weight:bold}#msthd .msthdlink{position:relative;float:right;width:60%;margin:-2.4em 0 0}#msthd .msthdlink ul{float:right;text-align:right}#msthd .msthdlink ul li.ytop{float:left;padding-right:5px}#msthd .msthdlink ul li.help{display:block;float:left;margin-left:5px}#msthd .msthdlink .compo{float:right;clear:both;width:100%;margin:7px 0 0 0;text-align:right}#msthd .msthdlink .compo .bn{float:right;width:70px}#msthd .msthdlink .compo .txt{float:right;margin:.6em 5px 0 0}
 
 .globalnav__menu {
+  min-width: 970px;
 }
 .gmenu {
   overflow: hidden;
